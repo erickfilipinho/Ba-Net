@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planos — Banet</title>
+  <link rel="stylesheet" href="Css/planos.css">
+  <link rel="shortcut icon" href="Imagens/Logos/4.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img onclick="location.href='index.html'" src="Imagens/Logos/4.png" alt="Logo Banet">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container">
+    <h1>Planos</h1>
+
+    <!-- PLANOS -->
+    <section class="planos-area">
+      <button class="nav-btn left" id="btnLeft">&#10094;</button>
+
+      <div class="planos-container" id="planos">
+        <div class="plano plan-1">
+          <h2>Plano Básico</h2>
+          <p class="vel">250 Mbps</p>
+          <p>Ideal pra navegar e redes sociais</p>
+          <p class="price">R$ 19,90 / mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="plano plan-2">
+          <h2>Plano Intermediário</h2>
+          <p class="vel">400 Mbps</p>
+          <p>Streaming sem travar e vídeo-chamadas melhores</p>
+          <p class="price">R$ 39,90 / mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="plano plan-3">
+          <h2>Plano Premium</h2>
+          <p class="vel">500 Mbps</p>
+          <p>Gamer leve e streaming em alta</p>
+          <p class="price">R$ 59,90 / mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="plano plan-4">
+          <h2>Plano Família</h2>
+          <p class="vel">600 Mbps</p>
+          <p>Vários aparelhos sem perder qualidade</p>
+          <p class="price">R$ 79,90 / mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="plano plan-5">
+          <h2>Plano Empresarial</h2>
+          <p class="vel">900 Mbps</p>
+          <p>Conexão robusta pra empresa</p>
+          <p class="price">R$ 99,90 / mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+      </div>
+
+      <button class="nav-btn right" id="btnRight">&#10095;</button>
+    </section>
+
+    <hr>
+
+    <!-- COMBOS -->
+    <section class="combos">
+      <h1>Combos</h1>
+
+      <div class="combos-grid">
+        <div class="combo">
+          <h3>Combo Básico</h3>
+          <p>Internet + 20 canais</p>
+          <p><strong>R$ 89,90</strong>/mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="combo">
+          <h3>Combo Intermediário</h3>
+          <p>Internet + 30 canais</p>
+          <p><strong>R$ 109,90</strong>/mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="combo">
+          <h3>Combo Premium</h3>
+          <p>Internet + 40 canais</p>
+          <p><strong>R$ 129,90</strong>/mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+
+        <div class="combo">
+          <h3>Combo Família</h3>
+          <p>Internet + 50 canais</p>
+          <p><strong>R$ 149,90</strong>/mês</p>
+          <button onclick="location.href='404.html'">Assinar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 Banet. Todos os direitos reservados.</p>
+    <p>Contato: <a href="mailto:contato@banet.com">contato@banet.com</a></p>
+    <p>Telefone: (11) 1234-5678</p>
+    <p>Endereço: Rua Exemplo, 123, Brumado-BA</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const cont = document.getElementById('planos');
+    const btnLeft = document.getElementById('btnLeft');
+    const btnRight = document.getElementById('btnRight');
+
+    btnLeft.onclick = () => cont.scrollBy({ left: -320, behavior: 'smooth' });
+    btnRight.onclick = () => cont.scrollBy({ left: 320, behavior: 'smooth' });
+
+    // Transformar scroll vertical em horizontal na seção de planos
+    cont.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      cont.scrollBy({ left: e.deltaY, behavior: 'auto' });
+    }, { passive: false });
+  </script>
+
+  <!-- ANIMAÇÃO DE TRANSIÇÃO -->
+  <div class="page-fade"></div>
+</body>
+
+</html>

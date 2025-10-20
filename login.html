@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Cadastro — Banet</title>
+  <link rel="shortcut icon" href="Imagens/Logos/4.png" type="image/x-icon">
+  <link rel="stylesheet" href="Css/Login.css">
+</head>
+<body>
+
+  <!-- ===== SETA DE VOLTAR ===== -->
+  <a href="index.html" class="back-arrow">&#8592;</a>
+
+  <!-- ===== MANCHAS DE FUNDO ===== -->
+  <div class="mancha mancha-1"></div>
+  <div class="mancha mancha-2"></div>
+
+  <!-- ===== CONTAINER DO CARD ===== -->
+  <div class="card-container">
+    <div class="card" id="flip-card">
+      
+      <!-- LOGIN -->
+      <div class="card-face card-front">
+        <h1>Login</h1>
+        <form>
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" placeholder="Seu email" required>
+          
+          <label for="login-senha">Senha:</label>
+          <input type="password" id="login-senha" placeholder="Sua senha" required>
+          
+          <button type="submit">Entrar</button>
+        </form>
+        <p class="switch">Não tem conta? <span id="to-register">Cadastre-se</span></p>
+      </div>
+
+      <!-- CADASTRO -->
+      <div class="card-face card-back">
+        <h1>Cadastro</h1>
+        <form>
+          <label for="cad-nome">Nome:</label>
+          <input type="text" id="cad-nome" placeholder="Seu nome" required>
+          
+          <label for="cad-email">Email:</label>
+          <input type="email" id="cad-email" placeholder="Seu email" required>
+          
+          <label for="cad-senha">Senha:</label>
+          <input type="password" id="cad-senha" placeholder="Sua senha" required>
+          
+          <button type="submit">Cadastrar</button>
+        </form>
+        <p class="switch">Já tem conta? <span id="to-login">Login</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== PARTICULAS ===== -->
+  <script>
+    const container = document.body;
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.width = `${4 + Math.random() * 6}px`;
+      particle.style.height = particle.style.width;
+      particle.style.animationDuration = `${5 + Math.random() * 10}s`;
+      container.appendChild(particle);
+    }
+
+    // ===== FLIP CARD =====
+    const flipCard = document.getElementById('flip-card');
+    document.getElementById('to-register').onclick = () => flipCard.classList.add('flipped');
+    document.getElementById('to-login').onclick = () => flipCard.classList.remove('flipped');
+  </script>
+    <div class="page-fade"></div>
+</body>
+</html>

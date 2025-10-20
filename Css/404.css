@@ -1,0 +1,94 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #002244;
+    /* azul da logo */
+    overflow: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* ===== TEXTO ===== */
+h1 {
+    font-size: 8rem;
+    color: #002244;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* ===== BOTÃO ===== */
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* ===== ANIMAÇÃO DO TEXTO ===== */
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== SINAL DE WI-FI ===== */
+.wifi {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #007bff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: girar 6s linear infinite;
+    opacity: 0.2;
+}
+
+/* ===== ANIMAÇÃO DO WI-FI ===== */
+@keyframes girar {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}

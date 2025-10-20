@@ -1,0 +1,469 @@
+/* =====================================================
+   RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   BASE
+===================================================== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5faff;
+  color: #111;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+  color: #007bff;
+}
+
+/* =====================================================
+   BARRA DE PESQUISA
+===================================================== */
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barra-pesquisa input {
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100vh; /* sugere-se usar % em vez de vh para responsividade */
+}
+
+.barra-pesquisa input:focus {
+  border-color: #007bff;
+  width: 230px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+.sessao_hero {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a3d62, #1e6091, #168aad);
+  color: white;
+  overflow: hidden;
+  animation: fundoMover 12s ease-in-out infinite alternate;
+  background-size: 200% 200%;
+}
+
+@keyframes fundoMover {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.conteudo-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+}
+
+.conteudo-hero .texto {
+  max-width: 500px;
+  animation: surgir 1.2s ease forwards;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conteudo-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.conteudo-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.conteudo-hero button {
+  background: #fff;
+  color: #0a3d62;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.conteudo-hero button:hover {
+  background: #e0e0e0;
+}
+
+.conteudo-hero .imagem img {
+  width: 350px;
+  animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =====================================================
+   SESSÃO SOBRE HOME
+===================================================== */
+.sessao_sobre_home {
+  text-align: center;
+  padding: 80px 30px;
+  background: #fff;
+}
+
+.sessao_sobre_home h2 {
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 40px;
+}
+
+.vantagens {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.vantagem {
+  background: #f0f8ff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.vantagem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.vantagem img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.vantagem h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   PLANOS
+===================================================== */
+.sessao_planos_home {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.sessao_planos_home h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #002244;
+}
+
+.planos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.plano {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 240px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plano:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.plano h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.plano p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.plano span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.plano button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.plano button:hover {
+  background-color: #0056b3;
+}
+
+.plano.destaque {
+  border: 2px solid #007bff;
+  transform: scale(1.05);
+}
+
+/* =====================================================
+   SESSÃO 3: SOBRE
+===================================================== */
+.sessao_3_sobre {
+  padding: 100px 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #f8fbff;
+}
+
+.container-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  gap: 60px;
+}
+
+/* ===== IMAGENS ===== */
+.imagens-sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imagens-sobre img {
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TEXTO ===== */
+.texto-sobre {
+  max-width: 500px;
+}
+
+.texto-sobre h4 {
+  color: #007bff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.texto-sobre h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.texto-sobre h2 span {
+  color: #007bff;
+}
+
+.texto-sobre p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.texto-sobre ul {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.texto-sobre ul li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.texto-sobre button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.texto-sobre button:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+/* ===== FUNDO DESTACADO ===== */
+.fundo-sobre {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 60px 50px;
+  transition: 0.3s ease;
+}
+
+.fundo-sobre:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+  background-color: #001f3f;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #66aaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* =====================================================
+   ANIMAÇÃO SPLASH
+===================================================== */
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: splashFade 3s forwards;
+}
+
+.splash-logo {
+  width: 150px;
+  animation: logoPulse 1s ease-in-out 0.3s forwards;
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes splashFade {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
